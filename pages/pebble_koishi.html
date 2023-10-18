@@ -52,60 +52,8 @@
 									<!-- Post -->
 										<article class="box post">
 											<header>
-												<h2><strong>Pebble App Development</strong></h2>
+												<h2><strong>Koishi - Japanese Kana Flashcards</strong></h2>
 											</header>
-											<h3>What is it?</h3>
-											<p>
-												Pebble was one of the first smartwatches to hit the market back in 2013 after a successful Kickstarter campaign (the most successful ever at the time). However, at the end of 2016, Pebble was bought out by Fitbit who was then bought out by Google, and now they are long gone. Luckily, even though official support for Pebble watches is no more, the <a href="https://rebble.io/" target="_blank">Rebble</a> community has stepped up to the plate to keep the watch alive for people still using it. It's an awesome community project that I am quite grateful for as a longtime Pebble user.
-												<br>
-												<br>
-												One of the best aspects of the Pebble/Rebble ecosystem is all the custom software available. Since its inception, Pebble has always been very developer driven, so anyone is free to make anything they want for the watch and upload it to the store. I’ve had my Pebble for more than 6 years now, and it’s something I use daily. So, if there is anything I feel is lacking, there is nothing stopping me from just making it and uploading it for anyone to use! This page documents some of the things I have made for the platform.
-											</p>
-											<h3>How?</h3>
-											<p>
-												As mentioned, Pebble has been very developer driven from the beginning and as such documentation for everything relating to building software for the watch is available. Since they have been closed, the Rebble community has maintained all the <a href="https://developer.rebble.io/developer.pebble.com/index.html" target="_blank">documentation</a>. It’s a bit scattered and has quite a few broken links, but the core functionality remains. Apps for Pebble can either be “watchfaces'' or “watch apps”, both of which are written in C. In addition, you can also use JavaScript to add web content to your application such as showing the weather on a watchface.
-												<br>
-												<br>
-												Back when Pebble was around, you were able to use a cloud based development environment called CloudPebble. It was very convenient and accessible, however that has since been shut down leaving only the local SDK. For my purposes, I use a Linux Virtual Machine image provided by the Rebble community. It has the SDK alongside some other tools already loaded making it fairly simple to begin programming.
-											</p>
-											<hr>
-											<h3 id="layton">Professor Layton - Mini London</h3>
-											<h3>What is it?</h3>
-											<p>
-												In my time as a Pebble user, I’ve come across and used many watchfaces, much of them themed around pop culture. Through the passion from developers, you can find watchfaces for most popular pieces of media, however one that was lacking in my eyes was one based on the Professor Layton games. It’s a series that first began in 2007 on the Nintendo DS. Since then, it has had several games, plenty of merchandise and even an animated feature film. It’s a franchise that is near and dear to me. In 2023, there was an announcement of a new Professor Layton game, which reignited the flames of a seemingly dead franchise. This announcement finally gave me the motivation to fill the top hat shaped hole in my watch.
-												<br>
-												<br>
-												The final product is a fully customizable watchface that showcases many characters from across the Professor Layton series. You can change the date and time format and choose from up to 30 characters to appear among 3 slots. Some other features include the ability to assign a random character and have it be shuffled based on a user-defined time interval and the Spoiler Mode that hides characters that could be considered spoilers from being selected. I’m very happy with how it turned out, and the reception among the community has been positive as well. You can check it out <a href="https://apps.rebble.io/en_US/application/63ed5e8319ed6a00090984a1" target="_blank">here</a> or in the download section on this page. If you have a Pebble Time/Round and you want to use the watchface yourself, open the Pebble app and navigate to the App Store. Any search relating to “Layton'' should make it appear, just tap add and you’ll be good to go!
-											</p>
-											<h3>How?</h3>
-											<p>
-												To start off, I needed to figure out what I wanted to watchface to look like. Using photo editing software, I was able to make a mockup of the watchface’s design. Something to keep in mind is that I am not an artist, in fact, I am quite terrible when it comes to any sort of visuals. I knew if I was going to do something, it would have to adapt from some already existing piece of art. My original idea was to incorporate the <a href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d59256e0-ecd4-4a55-a088-c0449acee893/d37nwp4-06fa7825-722c-4f53-a3dd-793e580a656a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q1OTI1NmUwLWVjZDQtNGE1NS1hMDg4LWMwNDQ5YWNlZTg5M1wvZDM3bndwNC0wNmZhNzgyNS03MjJjLTRmNTMtYTNkZC03OTNlNTgwYTY1NmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Nq1Tb9HeDO3OF7-i3ydk-QgmfQnT5Ak4-BwcTOZ8hwI" target="_blank">Layton logo</a> into a clock. My attempts to do so failed tremendously. After a lot of thought, I figured out an idea that I thought may work. Inspired by some other watchfaces such as <a href="https://apps.rebble.io/en_US/application/571b4252e7a8a5fab000000f?native=false&query=toriwatc&section=watchfaces" target="bla
-												">toriwatch</a>, <a href="https://apps.rebble.io/en_US/application/570b8e4d5523d02f2e000021?native=false&query=waniwatch&section=watchfaces" target="_blank">waniwatch</a>, or this <a href="https://apps.rebble.io/en_US/application/579c8add1482cd051500038f?native=false&query=Pok%25C3%25A9mon&section=watchfaces" target="_blank">Pokémon watchface</a>, I realized I could leverage the magic of pixel art. After some research, not only did I find that this would be possible, but there was already a high quality source of art to pull from. There was a side mode included in one of the Professor Layton titles called “London Life.” In it, you lived your life in London amongst the characters from the game. That entire side game was made using pixel art and had sprites for almost every major character in the franchise at the time that I could pull from. With this new set of assets, I created the final design and came up with the concept of allowing the user to choose which characters appear on the watchface.
-												<br>
-												<br>
-												Implementing my concept had a few challenges. First there were the hardware limitations. There are four models of Pebble, and only two of them (the “Time” series) have support for color. I decided pretty early that I wasn’t going to support the black and white models, so I didn’t have to worry about creating a set of monochrome sprites. However, the color screens can only display 64 colors. I needed to make sure that all the images would display properly since they were created with far more colors at their disposal. If you try to display a color that the watch isn’t physically able to display, the software will simply round it to the nearest value it can display. It generally does a good job of choosing the right colors, but there are times where it can completely throw off an image. So to get the best results, I decided to manually go in and adjust each character and tweak their colors to best display on the screen. 
-												<br>
-												<br>
-												Once I had all my character images ready to go, I had to recreate my design template in code. This is relatively straightforward, but it is a bit tedious since it’s a lot of trial and error to line everything up just right. This is where my second hardware limitation became an issue. Out of the two models I was developing for, one was a square screen with a resolution of 144x168 and the other had a round screen with a resolution of 180x180. This difference means you have to essentially make two separate layouts to accommodate both displays. This can be a tricky process, since something that looks good on one display may not translate to the other. However, after much trial and error, I created a design I was happy with for both models.
-												<br>
-												<br>
-												The final part of the process was allowing the user to customize the watchface. In the Pebble ecosystem, this can be done with a HTML page that can be accessed through the phone the watch is connected to. Luckily, there is a widely used framework that allows for a much easier creation of configurations screen called <a href="https://github.com/pebble/clay#clay" target="bl
-												">Clay</a>. Clay allows you to use JSON to layout your configuration page and will generate everything for you. You can then use the AppMessage/MessageKey subsystem to exchange the data from the configuration page to the app itself. Using Clay is relatively simple once you understand how it works and it’s an extremely powerful tool in the Pebble toolkit. One important feature of Clay is the ability to add custom functionality using JavaScript. This was essential in implementing spoiler mode to hide spoiler characters from appearing.
-												<br>
-												<br>
-												After that was done, all that was left was to upload the watchface the Rebble Appstore and share it with the community. All in all, developing this watchface was a great learning experience. I’m condensing and omitting a lot of the development process for this post, but there was a lot to figure out. This was my first Pebble related project and my first real project using C (outside of some class assignments). There were a lot of mistakes and many hours of frustration trying to get this watchface to work, but it was all part of the experience. I learned a lot from making this and I’m very proud with how it turned out. It was just one big puzzle to solve and I’ve now left my mark on the Rebble community. 
-											</p>
-											<h3>Status</h3>
-											<p>
-												This watchface is considered complete. I will consider updating it if someone reports a bug or asks for a specific feature, but otherwise it is finished. It is avaiable to download from the Rebble appstore which can be accessed from the Pebble app on mobile or the link on this page alongside the GitHub repository.
-											</p>
-											<h3>Images</h3>
-											<img src="../images/pebble/layton1.gif" alt="Sqauare Pebble Watchface Gif" id="modalImg"/>
-											<img src="../images/pebble/layton2.gif" alt="Round Pebble Watchface Gif" id="modalImg"/>
-											<img src="../images/pebble/layton3.png" alt="Configuration Screen" id="modalImg"/>
-											
-											<hr>
-											<h3 id="koishi">Koishi - Japanese Kana Flashcards</h3>
 											<h3>What is it?</h3>
 											<p>
 												At the start of 2023, I was beginning to prepare for a semester abroad in Japan. Part of the preparation process was learning some basic Japanese, particularly the phonetic character sets Hiragana and Katakana. There are quite a few kana to learn and one great way of studying is by using flashcards. I used several flashcard apps on my phone or online to help me study, but I realized it would be great if I could have my flashcards on my watch. It’s a good excuse to make another Pebble app, so I decided to make it.
@@ -168,7 +116,7 @@
 												<!--Banner-->
 												<li>
 													<article class="box highlight">
-														<img src="../images/pebble/pebble_banner.png" alt="Pebble Banner" style="border-radius: 5px">
+														<img src="../images/pebble/koishi_banner.png" alt="Pebble Banner" style="border-radius: 5px">
 													</article>
 												</li>
 												<li>
@@ -177,28 +125,15 @@
 														<header>
 															<h3>Info</h3>
 														</header>
-														<p><strong>Name: </strong>Pebble App Development<br><strong>Contributors: </strong> Andy Villasmil<br><strong>Made with: </strong>C, JavaScript, JSON</p>
+														<p><strong>Name: </strong>Koishi - Japanese Kana Flashcards<br><strong>Year: </strong>2023<br><strong>Contributors: </strong> Andy Villasmil<br><strong>Made with: </strong>C, JavaScript, JSON<br><strong>Development Time:</strong> 3 weeks</p>
 													</article>
 												</li>
 												<li>
 													<!-- GitHub -->
 													<article class="box highlight">
 														<header>
-															<h3><a href="#layton">Professor Latyon - Mini London </a><br>GitHub Repository & Download</h3>
+															<h3><a href="#koishi">GitHub Repository & Download</h3>
 														</header>
-														<p><strong>Year: </strong>2023<br><strong>Development Time:</strong> 1 week</p>
-														<a href="https://github.com/robinfire110/layton-watchface" class="image left" target="_blank"><img src="../images/github.png" alt="GitHub Logo" style="max-width: 10em;"/></a>
-														<p>Click the logo to go to the GitHub Repository. Click below to be taken to the Rebble Appstore page.</p>
-														<ul class="actions">
-															<li><a href="https://apps.rebble.io/en_US/application/63ed5e8319ed6a00090984a1" class="button icon solid fa-clock" target="_blank">Rebble App Store</a></li>
-														</ul>
-														<br>
-														<hr>
-														<br>
-														<header>
-															<h3><a href="#koishi">Koishi - Japanese Kana Flashcards </a><br>GitHub Repository & Download</h3>
-														</header>
-														<p><strong>Year: </strong>2023<br><strong>Development Time:</strong> 3 weeks</p>
 														<a href="https://github.com/robinfire110/koishi-japanese-flashcards" class="image left" target="_blank"><img src="../images/github.png" alt="GitHub Logo" style="max-width: 10em;"/></a>
 														<p>Click the logo to go to the GitHub Repository. Click below to be taken to the Rebble Appstore page.</p>
 														<ul class="actions">
