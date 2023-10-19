@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>NoGS - Andy Villasmil</title>
+		<title>Parallel Portals - Andy Villasmil</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -52,21 +52,21 @@
 									<!-- Post -->
 										<article class="box post">
 											<header>
-												<h2><strong>NoGS VPN Checker</strong></h2>
+												<h2><strong>Parallel Portals</strong></h2>
 											</header>
 											<!--<span class="image featured"><img src="images/pic04.jpg" alt="" /></span>-->
 											<h3>What is it?</h3>
-											<p>NoGS is a Chrome Extension I made at the end of the 2022. It allows you to block websites unless you have a VPN turned on. You can list which sites you want blocked and how precise you want the VPN check to be. It came about when a friend of mine asked me if it was possible to block certain sites if you don't have a VPN turned on. After some research, I found that something like this didn't exist as far as I could tell, and I decided I might as well make it myself. </p>
+											<p>Parallel Portals is a game I made for the <a href="https://itch.io/jam/mini-jame-gam-10" target="_blank"></a>Mini Jame Gam #10. I was tasked with making a game in 58 hours that conformed to the theme “Reality is breaking” and to include a phone in some way. It’s mainly an action platformer where you must find the 8 core crystals to mend torn apart universe. Throughout your adventure, you find portals into other parallel realities with unique creatures and physics. Additionally, you can harness the power of realities other than your own using your phone to create pockets of another universe. In the end, it ranked 6th place for the jam!</p>
 											<h3>How?</h3>
-											<p>When figuring out the implementation, I figured a Chrome Extension would function best. They are lightweight, well supported and make it easy to insert functionality into the web browser. It also gave me a good opportunity to learn how to make a Chrome Extension. There only needed to be two basic functions to have a working program, the ability to determine whether or not the user is using a VPN and the ability to block a website. Blocking a website is fairly trivial and there are a lot of resources about how to do so online, however figuring out if the user is connected to a VPN is a bit trickier.</p>
-											<p>For the most part, there is nothing within the browser that says “hey, I’m using a VPN!”. However, we can take advantage of some of the properties of a VPN to determine whether they are being used. A flagship feature of a VPN is their ability to change your remote IP Address, effectively masking your own. As long as the user provides the program with a “default” IP address to be compared against, we can simply compare their current IP to the default one in the program. If they are different, we can assume they are connected to a VPN. This works, but there are two big issues. First, if you have a portable setup (i.e. a laptop), moving anywhere outside of your home will cause the program to wrongly believe you are connected to a VPN. Likewise, for many home networks, the remote IP address is dynamic and can/will be changed by your ISP on a whim making it a farily unreliable data point. The solution to this is to take full advantage of the information available to the program. IP Address have a bunch of data attached to them. You can determine someone’s general location very easily if you have their IP address (which is part of the reason people like to mask them with VPNs in the first place). Using this location data, the program can more accuratly guess at when a VPN is being used. For example, instead of checking for differences in the specific IP address, you could check for the difference in the country of that IP Address. This way, you could move all within the United States, but the moment you turn on your VPN to switch a different country (a common use for streaming sites), the program will recognize the VPN. By giving options on how the program should determine the VPN status, you can tailor fit it to function in most setups. </p>		
-											<p>I used my previous experience with HTML, CSS, and JavaScript to develop this, however this was my first-time using Bootstrap. I had always heard of it and knew it had something to do with styling but didn’t really know much else. After working with it and learning how to take advantage of it, I can say (as a person who is very challenged when it comes to the “prettiness” of a UI) Bootstrap really comes in handy. It worked perfectly for create a simple, professional, and consistent look for the extension. I’m very happy with the way it turned out and I am certainly going to use it for webapps in the future.</p>
-											<p>You can find out more specifics on how to use the extension and implemntation on the <a href="https://github.com/robinfire110/NoGS#readme" target="_blank">README on the GitHub page.</a> For the most up to date versions of the extension, check out the GitHub repository.</p>	
+											<p>This was my second game jam, and I had a lot more experience than the last time I did a jam. I was much better and managing my time and keeping the project limited to a reasonable scope. I initially intended for the game to be more linear, with levels that slowly introduced each universe and power, but I quickly realized that I only had time for one big level instead of several smaller ones. </p>	
+											<p>This was made in GameMaker 1.4 and I took advantage of several pre-made asset packs for the visuals and sounds. The idea of multiple parallel universes would not have been possible without a set of symmetrical assets, so that was a big help.</p>
+											<p>After my initial submission, I went back and made a Version 2. This mostly consisted of bug fixing, performance improvements, adding a small tutorial to help guide players and adding a browser version.</p>
 											<h3>Status</h3>
-											<p>For the most part, NoGS is complete with no future updates planned. However, if something comes up or some great feature comes to mind, I may consider updating it more. NoGS is free to download from the GitHub repository or by using the download link on this page.</p>
+											<p>This project is complete with no future updates planned. It is free to play from the itch.io page which you can access <a href="https://soltairus.itch.io/parallel-portals" target="_blank">here.</a></p>
 											<h3>Images</h3>
-											<img src="../images/nogs/nogs_1.png" alt="NoGS Extension Menu" id="modalImg"/>
-											<img src="../images/nogs/nogs_2.png" alt="NoGS Block Screen" id="modalImg"/>
+											<img src="../images/portals/portals_1.png" alt="Parallel Portals Screenshot 1" id="modalImg"/>
+											<img src="../images/portals/portals_2.png" alt="Parallel Portals Screenshot 2" id="modalImg"/>
+											<img src="../images/portals/portals_3.png" alt="Parallel Portals Screenshot 3" id="modalImg"/>
 										</article>
 								</div>
 
@@ -79,7 +79,7 @@
 												<!--Banner-->
 												<li>
 													<article class="box highlight">
-														<img src="../images/nogs/nogs_banner.png" alt="NoGS Banner" style="border-radius: 5px">
+														<img src="../images/portals/portals_banner.png" alt="NoGS Banner" style="border-radius: 5px">
 													</article>
 												</li>
 												<li>
@@ -88,19 +88,19 @@
 														<header>
 															<h3>Info</h3>
 														</header>
-														<p><strong>Name: </strong>NoGS<br><strong>Year: </strong>2022<br><strong>Contributors: </strong> Andy Villasmil<br><strong>Made with: </strong>HTML, CSS, JavaScript, Bootstrap<br><strong>Development Time:</strong> 2 weeks</p>
+														<p><strong>Name: </strong>Parallel Portals<br><strong>Year: </strong>2022<br><strong>Contributors: </strong> Andy Villasmil<br><strong>Made with: </strong>GameMaker 1.4<br><strong>Initial Development Time:</strong> 58 hours</p>
 													</article>
 												</li>
 												<li>
-													<!-- GitHub -->
+													<!-- Play -->
 													<article class="box highlight">
 														<header>
-															<h3>GitHub Repository & Download</h3>
+															<h3>Play Game</h3>
 														</header>
-														<a href="https://github.com/robinfire110/NoGS" class="image left" target="_blank"><img src="../images/github.png" alt="GitHub Logo" style="max-width: 10em;"/></a>
-														<p>Click the logo to go to the GitHub Repository. Click below to be taken directly to the releases section to download the latest release.</p>
+														<a href="https://soltairus.itch.io/parallel-portals" class="image left" target="_blank"><img src="../images/itch.png" alt="GitHub Logo" style="max-width: 10em;"/></a>
+														<p>Click here to go to the Parallel Portals itch.io page where the game is avaliable to play.</p>
 														<ul class="actions">
-															<li><a href="https://github.com/robinfire110/NoGS/releases" class="button icon solid fa-download" target="_blank">Download</a></li>
+															<li><a href="https://soltairus.itch.io/parallel-portals" class="button icon solid fa-gamepad" target="_blank">Play</a></li>
 														</ul>
 													</article>
 												</li>
