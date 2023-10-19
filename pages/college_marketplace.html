@@ -19,7 +19,7 @@
 				<div class="container">
 					<!-- Logo -->
 					<h1 id="logo"><a href="../index.html">Andy Villasmil</a></h1>
-					<p>Just a guy who knows what he's doing, until someone else does.</p>
+					<p>Portfolio</p>
 
 					<!-- Nav -->
 					<nav id="nav">
@@ -29,10 +29,17 @@
 							<li>
 								<a href="../index.html#features" class="icon solid fa-code"><span>Portfolio</span></a>
 								<ul>
-									<li><a href="pebble.html#main">Pebble App Development</a></li>
+									<li><a href="pebble.html#main">Pebble App Development</a>
+										<ul class="dropotron" style="user-select: none; display: none; position: absolute;">
+											<li style="white-space: nowrap;"><a href="pebble_layton.html" style="display: block;">Layton - Mini London</a></li>
+											<li style="white-space: nowrap;"><a href="pebble_koishi.html" style="display: block;">Koishi Flashcards</a></li>
+										</ul>
+									</li>
 									<li><a href="nogs.html#main">NoGS VPN Checker</a></li>
-									<li><a href="college_marketplace.html#main">College Marketplace</a></li>
 									<li><a href="lunar_golf.html#main">Lunar Golf VR</a></li>
+									<li><a href="college_marketplace.html#main">College Marketplace</a></li>
+									<li><a href="portals.html#main">Parallel Portals</a></li>
+									<li><a href="bindin.html#main">Bindin'</a></li>
 								</ul>
 							</li>
 							<li><a class="icon solid fa-envelope" href="#footer"><span>Contact</span></a></li>
@@ -56,10 +63,10 @@
 											</header>
 											<!--<span class="image featured"><img src="images/pic04.jpg" alt="" /></span>-->
 											<h3>What is it?</h3>
-											<p>College Marketplace was a project made for the SEO Tech Developer program during the Summer of 2022. It was the final project for the program, and we were given a week to create some sort of useful product using the skills we learned. Our team decided to make an online marketplace for students. The idea was to create a site similar to Craigslist that was made specifically for college students. If you were a student who had something to sell, you could do so safely with other people on your campus or nearby campuses. You were able to list, view and edit items. Some of the features to support this goal was only allowing “.edu” emails to make an account, email verification, and a built-in messaging system so users don’t have to give away any emails or phone numbers. It has a lot of other neat features such as a user dashboard to edit listings, user reviews, and more.</p>
+											<p>College Marketplace was a project made for the SEO Tech Developer program during the Summer of 2022. It was the final project for the program, and we were given a week to create some sort of useful product using the skills we learned. Our team decided to make an online marketplace for students, such as Craigslist that was made specifically for college students. If you were a student who had something to sell, you could do so safely with other people on your campus or nearby campuses. Some of the features to support this goal was only allowing “.edu” emails to make an account, email verification, and a built-in messaging system so users don’t have to give away any emails or phone numbers. It has a lot of other neat features such as a user dashboard to edit listings, user reviews, and more.</p>
 											<h3>How?</h3>
-											<p>During the SEO Tech Developer program, we generally used Python for our projects, and this is no different. All the backend was done using Python and Flask. Our frontend was done with CSS, Jinja, and a lot of hard work from one of our team members, Emmanuel. We used SQL to store user data into a database and made sure to encrypt (by hashing and salting) important data such as passwords. We also used several APIs for certain features such as email verification and Google Maps integration (which allows users to get a rough estimate of how close they are to a seller).</p>
-											<p>Out of our group of five, Emmanuel and Nicole worked on the user interface and front-end while Angela, Sarah, and I took care of the backend. Some of my specific contributions include implementing the database for logins and item listings, incorporating login sessions, adding the Google Maps API and general project management. It was my first time really working with a bigger team, so there was a lot of growing pains as we figured it out. However, this experience has undoubtedly helped me grow as a team player and leader for future projects. </p>		
+											<p>During the SEO Tech Developer program, we generally used Python for our projects, and this was no different. All the backend was done using Python and Flask. Our frontend was done with CSS, Jinja, and a lot of hard work from one of our team members, Emmanuel. We used SQL to store user data into a database and made sure to encrypt (by hashing and salting) important data such as passwords. We also used several APIs for certain features such as email verification and Google Maps integration (which allows users to get a rough estimate of how close they are to a seller).</p>
+											<p>Out of our group of five, Emmanuel and Nicole worked on the user interface and front-end while Angela, Sarah, and I took care of the backend. Some of my specific contributions include implementing the database for logins and item listings, incorporating login sessions, adding the Google Maps API and general project management. It was my first time really working with a bigger team (more than 2-3 people), so there was a lot of growing pains as we figured it out. However, this experience has undoubtedly helped me grow as a team player and leader for future projects. </p>		
 											<h3>Status</h3>
 											<p>Originally, the project was deployed to Heroku. However, in November 2022, Heroku changed their payment structure, specifically locking database access behind a paywall. This made it so we would have to pay to keep the application available. Sadly, it doesn’t make much sense to pay for a program purely for a portfolio. However, one of the other group members managed to get it working without the database support. This means if you create any data, it will generally be wiped within the hour. It greatly limits the usefulness of the appplication, but it’s still avaiable <a href="https://college-marketplace.herokuapp.com">here</a> if you wish to try it. However, by design, you won’t be able to get very far without a “.edu” email address. Otherwise, I tried to take as many screenshots as I could to give you a good idea of how it works.</p>
 											<h3>Images</h3>
@@ -102,7 +109,7 @@
 														<a href="https://github.com/atakux/final_proj" class="image left" target="_blank"><img src="../images/github.png" alt="GitHub Logo" style="max-width: 10em;"/></a>
 														<p>Click the logo to go to the GitHub Repository. Click web link button for Heroku deployment (limited without ".edu" email or proper Heroku database support).</p>
 														<ul class="actions">
-															<li><a href="../files/College-Marketplace.zip" class="button icon solid fa-download" download>Web Link</a></li>
+															<li><a href="https://college-marketplace.herokuapp.com/" class="button icon solid fa-globe" target="_blank">Web Link</a></li>
 														</ul>
 													</article>
 												</li>
@@ -120,15 +127,11 @@
 					<header>
 						<h2><strong>Contact</strong></h2>
 					</header>
-					<br>
-					<div class="row">
-						<ul class="icons">
-							<li class="icon solid fa-envelope" style="padding-top: 0; padding-bottom: 1em"><a href="mailto:webmaster@example.com" target="_blank">aevillas@uncg.edu</a></li>
-							<li class="icon brands fa-github" style="padding-top: 0; padding-bottom: 1em"><a href="https://github.com/robinfire110" target="_blank">robinfire110</a></li>
-							<li class="icon brands fa-linkedin" style="padding-top: 0; padding-bottom: 1em"><a href="https://www.linkedin.com/in/andyvillasmil/" target="_blank">andyvillasmil</a></li>
-						</ul>
-					</div>
-					
+					<ul class="icons">
+						<li class="icon brands fa-github" style="padding-top: 0; padding-bottom: 1em"><a href="https://github.com/robinfire110" target="_blank">robinfire110</a></li>
+						<li class="icon solid fa-circle" style="padding-top: 0; padding-bottom: 1em; padding-left: 1em;"></li>
+						<li class="icon brands fa-linkedin" style="padding-top: 0; padding-bottom: 1em"><a href="https://www.linkedin.com/in/andyvillasmil/" target="_blank">andyvillasmil</a></li>
+					</ul>
 				</div>
 				<div id="copyright" class="container">
 					<ul class="links">
