@@ -19,7 +19,7 @@
 				<div class="container">
 					<!-- Logo -->
 					<h1 id="logo"><a href="../index.html">Andy Villasmil</a></h1>
-					<p>Just a guy who knows what he's doing, until someone else does.</p>
+					<p>Portfolio</p>
 
 					<!-- Nav -->
 					<nav id="nav">
@@ -29,10 +29,17 @@
 							<li>
 								<a href="../index.html#features" class="icon solid fa-code"><span>Portfolio</span></a>
 								<ul>
+									<li><a href="pebble.html#main">Pebble App Development</a>
+										<ul class="dropotron" style="user-select: none; display: none; position: absolute;">
+											<li style="white-space: nowrap;"><a href="pebble_layton.html" style="display: block;">Layton - Mini London</a></li>
+											<li style="white-space: nowrap;"><a href="pebble_koishi.html" style="display: block;">Koishi Flashcards</a></li>
+										</ul>
+									</li>
 									<li><a href="nogs.html#main">NoGS VPN Checker</a></li>
-									<li><a href="college_marketplace.html#main">College Marketplace</a></li>
 									<li><a href="lunar_golf.html#main">Lunar Golf VR</a></li>
-									<li><a href="pebble.html#main">Pebble App Development</a></li>
+									<li><a href="college_marketplace.html#main">College Marketplace</a></li>
+									<li><a href="portals.html#main">Parallel Portals</a></li>
+									<li><a href="bindin.html#main">Bindin'</a></li>
 								</ul>
 							</li>
 							<li><a class="icon solid fa-envelope" href="#footer"><span>Contact</span></a></li>
@@ -56,14 +63,14 @@
 											</header>
 											<!--<span class="image featured"><img src="images/pic04.jpg" alt="" /></span>-->
 											<h3>What is it?</h3>
-											<p>NoGS is a Chrome Extension I made at the end of the 2022. It allows you to block websites unless you have a VPN turned on. You can list which sites you want blocked and how precise you want the VPN check to be. It came about when a friend of mine asked me if it was possible to block certain sites if you don't have a VPN turned on. After some research, I found that something like this didn't exist as far as I could tell, and I decided I might as well make it myself. </p>
+											<p>NoGS is a Chrome Extension I made at the end of the 2022. It allows you to block websites depending on whether or not you have a VPN turned on. You can list which sites you want blocked and how precise you want the VPN check to be. It came about when a friend of mine asked me if it was possible to block certain sites if you don't have a VPN turned on. After some research, I found that something like this didn't exist as far as I could tell, and I decided I might as well make it myself. </p>
 											<h3>How?</h3>
 											<p>When figuring out the implementation, I figured a Chrome Extension would function best. They are lightweight, well supported and make it easy to insert functionality into the web browser. It also gave me a good opportunity to learn how to make a Chrome Extension. There only needed to be two basic functions to have a working program, the ability to determine whether or not the user is using a VPN and the ability to block a website. Blocking a website is fairly trivial and there are a lot of resources about how to do so online, however figuring out if the user is connected to a VPN is a bit trickier.</p>
 											<p>For the most part, there is nothing within the browser that says “hey, I’m using a VPN!”. However, we can take advantage of some of the properties of a VPN to determine whether they are being used. A flagship feature of a VPN is their ability to change your remote IP Address, effectively masking your own. As long as the user provides the program with a “default” IP address to be compared against, we can simply compare their current IP to the default one in the program. If they are different, we can assume they are connected to a VPN. This works, but there are two big issues. First, if you have a portable setup (i.e. a laptop), moving anywhere outside of your home will cause the program to wrongly believe you are connected to a VPN. Likewise, for many home networks, the remote IP address is dynamic and can/will be changed by your ISP on a whim making it a farily unreliable data point. The solution to this is to take full advantage of the information available to the program. IP Address have a bunch of data attached to them. You can determine someone’s general location very easily if you have their IP address (which is part of the reason people like to mask them with VPNs in the first place). Using this location data, the program can more accuratly guess at when a VPN is being used. For example, instead of checking for differences in the specific IP address, you could check for the difference in the country of that IP Address. This way, you could move all within the United States, but the moment you turn on your VPN to switch a different country (a common use for streaming sites), the program will recognize the VPN. By giving options on how the program should determine the VPN status, you can tailor fit it to function in most setups. </p>		
 											<p>I used my previous experience with HTML, CSS, and JavaScript to develop this, however this was my first-time using Bootstrap. I had always heard of it and knew it had something to do with styling but didn’t really know much else. After working with it and learning how to take advantage of it, I can say (as a person who is very challenged when it comes to the “prettiness” of a UI) Bootstrap really comes in handy. It worked perfectly for create a simple, professional, and consistent look for the extension. I’m very happy with the way it turned out and I am certainly going to use it for webapps in the future.</p>
 											<p>You can find out more specifics on how to use the extension and implemntation on the <a href="https://github.com/robinfire110/NoGS#readme" target="_blank">README on the GitHub page.</a> For the most up to date versions of the extension, check out the GitHub repository.</p>	
 											<h3>Status</h3>
-											<p>For the most part, NoGS is complete with no future updates planned. However, if something comes up or some great feature comes to mind, I may consider updating it more. NoGS is free to download from the GitHub repository or by using the download link on this page.</p>
+											<p>For the most part, NoGS is complete with no future updates planned. However, if something comes up or some great feature comes to mind, I may consider updating it more. NoGS is free to download from the GitHub repository or by using the download link on <a href="https://github.com/robinfire110/NoGS/releases" target="_blank">this page.</a></p>
 											<h3>Images</h3>
 											<img src="../images/nogs/nogs_1.png" alt="NoGS Extension Menu" id="modalImg"/>
 											<img src="../images/nogs/nogs_2.png" alt="NoGS Block Screen" id="modalImg"/>
@@ -118,15 +125,11 @@
 					<header>
 						<h2><strong>Contact</strong></h2>
 					</header>
-					<br>
-					<div class="row">
-						<ul class="icons">
-							<li class="icon solid fa-envelope" style="padding-top: 0; padding-bottom: 1em"><a href="mailto:webmaster@example.com" target="_blank">aevillas@uncg.edu</a></li>
-							<li class="icon brands fa-github" style="padding-top: 0; padding-bottom: 1em"><a href="https://github.com/robinfire110" target="_blank">robinfire110</a></li>
-							<li class="icon brands fa-linkedin" style="padding-top: 0; padding-bottom: 1em"><a href="https://www.linkedin.com/in/andyvillasmil/" target="_blank">andyvillasmil</a></li>
-						</ul>
-					</div>
-					
+					<ul class="icons">
+						<li class="icon brands fa-github" style="padding-top: 0; padding-bottom: 1em"><a href="https://github.com/robinfire110" target="_blank">robinfire110</a></li>
+						<li class="icon solid fa-circle" style="padding-top: 0; padding-bottom: 1em; padding-left: 1em;"></li>
+						<li class="icon brands fa-linkedin" style="padding-top: 0; padding-bottom: 1em"><a href="https://www.linkedin.com/in/andyvillasmil/" target="_blank">andyvillasmil</a></li>
+					</ul>
 				</div>
 				<div id="copyright" class="container">
 					<ul class="links">
